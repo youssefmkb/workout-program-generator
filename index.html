@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkoutAI — Générateur de Programme</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- jsPDF (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Workout<span>AI</span></div>
+  <div class="badge">Powered by Claude</div>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Build your<em>perfect plan.</em></h1>
+    <p>Programme d'entraînement personnalisé en 30 secondes. Généré par Claude AI, exporté en PDF.</p>
+  </div>
+
+  <!-- FORMULAIRE -->
+  <div class="form-grid">
+    <div class="field">
+      <label>Prénom</label>
+      <input type="text" id="prenom" placeholder="Alex" />
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" id="email" placeholder="alex@email.com" />
+    </div>
+    <div class="field">
+      <label>Objectif</label>
+      <select id="objectif">
+        <option value="prise de masse">Prise de masse</option>
+        <option value="perte de poids">Perte de poids</option>
+        <option value="endurance">Endurance</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Niveau</label>
+      <select id="niveau">
+        <option value="débutant">Débutant</option>
+        <option value="intermédiaire">Intermédiaire</option>
+        <option value="avancé">Avancé</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Équipement</label>
+      <select id="equipement">
+        <option value="salle complète">Salle complète</option>
+        <option value="haltères seulement">Haltères seulement</option>
+        <option value="aucun équipement">Aucun équipement</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Jours / semaine</label>
+      <select id="jours">
+        <option value="3">3 jours</option>
+        <option value="4" selected>4 jours</option>
+        <option value="5">5 jours</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="btn-generate" id="btn-generate">
+    <div class="spinner"></div>
+    <span class="btn-text">Générer mon programme →</span>
+  </button>
+  <div class="error-msg" id="error-msg"></div>
+
+  <!-- RÉSULTAT -->
+  <div id="result-section">
+    <div class="stats-bar" id="stats-bar"></div>
+    <div class="result-header">
+      <h2 id="result-title">Programme <span></span></h2>
+      <div class="action-buttons">
+        <button class="btn-action" data-action="download-pdf">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 12v2h12v-2M8 2v9M4 8l4 4 4-4"/>
+          </svg>
+          PDF
+        </button>
+        <!-- Email feature - à activer en v2
+        <button class="btn-action" data-action="send-email">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="1" y="3" width="14" height="10" rx="2"/>
+            <path d="M1 5l7 5 7-5"/>
+          </svg>
+          Envoyer par email
+        </button>
+        -->
+      </div>
+    </div>
+    <div class="program-container" id="program-container"></div>
+  </div>
+</main>
+
+<!-- Toast notifications -->
+<div class="toast" id="toast"></div>
+
+<!-- App entry point (ES modules) -->
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
