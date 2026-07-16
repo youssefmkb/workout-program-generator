@@ -75,9 +75,11 @@ Stratégie : forcer Claude à retourner uniquement du JSON valide en spécifiant
 - [ ] Mode "progression" : génération multi-cycles avec progression de charges
 - [ ] Streaming de la réponse Claude pour affichage progressif
 
-## Auteur
+## Author
 
-**Youssef Mokhbi** — Ingénieur Full Stack en transition vers AI Integration Engineering
-[LinkedIn](https://linkedin.com/in/youssef-mokhbi-654a9b10a) · [Email](mailto:mokhbi.youssef@gmail.com)
+**Youssef Mokhbi** — AI Automation & Integration Engineer
+
+- LinkedIn: [linkedin.com/in/youssef-mokhbi-654a9b10a](https://linkedin.com/in/youssef-mokhbi-654a9b10a)
+- GitHub: [github.com/youssefmkb](https://github.com/youssefmkb)
 
 Certifications Anthropic : Claude 101 · AI Fluency · Building with the Claude API
